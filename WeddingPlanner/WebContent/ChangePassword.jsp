@@ -1,6 +1,6 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div style="background-image:url(images\\bg-body.jpg); height:115%; width:100%"></div>
-<jsp:include page="UserHome.jsp"/>
+<jsp:include page="UserHeader.jsp"/>
 
 <br/><br/><br/>
 <div class="container" style="margin-top:-700px">
@@ -30,12 +30,6 @@
   <br/>
   <form class="form-horizontal" action="changePassword" method="post" style=" margin-left:25%;">
     <div class="form-group">
-      <label class="control-label col-sm-2" for="email">Email:</label>
-      <div class="col-sm-4">
-      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-    </div>
-    </div>
-    <div class="form-group">
       <label class="control-label col-sm-2" for="newpassword">New Password:</label>
       <div class="col-sm-4">
       <input type="password" class="form-control" id="newpassword" placeholder="Enter password" name="newpassword">
@@ -47,7 +41,7 @@
       <input type="password" class="form-control" id="comfirmpassword" placeholder="Enter password" name="confirmpassword">
     </div> 
     </div>
-    <button type="submit" class="btn btn-default" style="margin-left:30%">Change Password</button>
+    <button type="submit" class="btn btn-default" style="margin-left:25%">Change Password</button>
   </form>
 
 <br/>

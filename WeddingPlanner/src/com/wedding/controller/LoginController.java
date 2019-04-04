@@ -42,6 +42,9 @@ public class LoginController extends HttpServlet {
 			String role=obj.getRole();
 			if(role.equals("Admin")) {
 				
+				//HttpSession session=request.getSession();
+			//	session.setAttribute("admin",userObj);
+				
 				RequestDispatcher rd=request.getRequestDispatcher("Admin.jsp");
 				rd.forward(request, response);
 			}
