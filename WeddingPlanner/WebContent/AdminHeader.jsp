@@ -21,6 +21,7 @@
         <ul class="dropdown-menu">
           <li><a href="AddCategory.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Add Category</a></li>
           <li><a href="viewAllCategory" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">View All Categories</a></li>
+		  <li><a href="getSubCategoryForm" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Add Sub Category</a></li>
 
         </ul>
       </li>

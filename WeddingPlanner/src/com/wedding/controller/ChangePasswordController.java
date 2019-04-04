@@ -38,12 +38,12 @@ public class ChangePasswordController extends HttpServlet {
 			System.out.println(obj);
 			if(obj==true){
 				RequestDispatcher rd=request.getRequestDispatcher("UserHome.jsp");
-				request.setAttribute("errorMag","success");
+				request.setAttribute("errorMsg","success");
 				rd.forward(request, response);
 			}
 			else{
 				RequestDispatcher rd=request.getRequestDispatcher("ChangePassword.jsp");
-				request.setAttribute("errorMag","failed");
+				request.setAttribute("errorMsg","failed");
 				rd.forward(request, response);
 			}
 		}

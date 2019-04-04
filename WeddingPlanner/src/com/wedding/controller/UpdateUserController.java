@@ -4,7 +4,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+//import java.util.Date;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -32,16 +32,17 @@ public class UpdateUserController extends HttpServlet {
     	String s3=request.getParameter("fName");
     	String s4=request.getParameter("lName");
     	String s5=request.getParameter("gender");
-    	String s6=request.getParameter("dob");
+    	//String s6=request.getParameter("dob");
     	String s7=request.getParameter("address");
     	String s8=request.getParameter("mob");
 
     	//Converting String into java.util.Date
-    	SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
-    	Date dob=null;
+    	/*SimpleDateFormat sdf=new SimpleDateFormat("dd/MM/yyyy");
+    	Date dob=null;*/
 		try {
-			dob = sdf.parse(s6);
-		} catch (ParseException e) {
+			//dob = sdf.parse(s6);
+			
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 
@@ -51,12 +52,13 @@ public class UpdateUserController extends HttpServlet {
     	ur.setFirstName(s3);
     	ur.setLastName(s4);
     	ur.setGender(s5);
-    	ur.setDateOfBirth(dob);
+    //	ur.setDateOfBirth(dob);
     	ur.setAddress(s7);
     	ur.setMobileNo(s8);
     	
     	UserDao dao=new UserDaoImpl();
     	boolean r=dao.updateUser(ur);
+    	System.out.println(r);
     	if(r){
     		HttpSession session=request.getSession();
     		request.setAttribute("msg", "User updated Succesfully");

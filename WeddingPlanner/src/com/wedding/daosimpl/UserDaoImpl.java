@@ -86,20 +86,21 @@ public class UserDaoImpl implements UserDao {
 		try {
 			
 			Connection conn=ConnectionProvider.getConnection();
-			PreparedStatement ps=conn.prepareStatement("Update UserTab set FirstName=?,LastName=?,Gender=?,DateOfBirth=?,address=?,MobileNo=? where email=?");
-			ps.setString(7,userObj.getEmail());
+			PreparedStatement ps=conn.prepareStatement
+		("Update UserTab set FristName=?,LastName=?,address=?,MobileNo=? where email=?");
+			ps.setString(5,userObj.getEmail());
 			//ps.setString(2,userObj.getPassword());
 			ps.setString(1,userObj.getFirstName());
 			ps.setString(2,userObj.getLastName());
-			ps.setString(3,userObj.getGender());
-			ps.setString(5,userObj.getAddress());
-			ps.setString(6,userObj.getMobileNo());
+			
+			ps.setString(3,userObj.getAddress());
+			ps.setString(4,userObj.getMobileNo());
 
 			/*Converting java.util.Date into java.sql.Date*/
-			Date dateOfBirth=userObj.getDateOfBirth();
+		/*	Date dateOfBirth=userObj.getDateOfBirth();
 			long l=dateOfBirth.getTime();
 			java.sql.Date dob=new java.sql.Date(l);
-			ps.setDate(4, dob);
+			ps.setDate(4, dob);*/
 			
 			int i=ps.executeUpdate();
 			if(i!=0){

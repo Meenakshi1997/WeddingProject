@@ -31,12 +31,7 @@
     </div>
   </div>
 
-  <div class="form-group">
-    <label class="control-label col-sm-2" for="dob">Date Of Birth:</label>
-    <div class="col-sm-5">
-    <input type="text" class="form-control" id="dob" name="dob" value="${sessionScope.user.dateOfBirth }">
-    </div>
-  </div> 
+  
    <div class="form-group">
     <label class="control-label col-sm-2" for="address">Address:</label>
     <div class="col-sm-5">
