@@ -26,7 +26,7 @@
 <br/><br/>
 <img src="images/separator.png" class="img-rounded" alt="Main_Image" style="width:100%">	
 
-  <div align="center"><h2 style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Admin Login Form</h2></div>
+  <div align="center"><h2 style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Login Form</h2></div>
   <br/>
   <form class="form-horizontal" action="login" method="post" style=" margin-left:25%;">
     <div class="form-group">

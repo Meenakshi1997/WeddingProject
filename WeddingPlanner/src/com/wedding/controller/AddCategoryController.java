@@ -1,5 +1,6 @@
 package com.wedding.controller;
 
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -11,12 +12,14 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
 import com.wedding.daos.CategoryDao;
 import com.wedding.daosimpl.CategoryDaoImpl;
 import com.wedding.models.Category;
 
 
 @WebServlet("/addCategory")
+
 public class AddCategoryController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -30,7 +33,9 @@ public class AddCategoryController extends HttpServlet {
 		Category catObj=new Category();
 		catObj.setCategoryName(name);
 		catObj.setCategoryDesc(d);
+				
 
+		
 		CategoryDao daoObj=new CategoryDaoImpl();
 		boolean r=daoObj.addCategory(catObj);
 		if(r){

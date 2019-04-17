@@ -11,10 +11,10 @@
 		</div>
 	</c:if>
 	
-	<h1 style="font-family:Monotype Corsiva; text-align:center; color:brown; font-size:30px; font-weight:bold">List of Categories</h1>
+	<h1 style="font-family:Monotype Corsiva; text-align:center; color:brown; font-size:30px; font-weight:bold">List of Sub Categories</h1>
 	<br/>
 	<c:choose>
-		<c:when test="${cList.size() eq 0}">
+		<c:when test="${scList.size() eq 0}">
 			No Categories Found...
 		</c:when>
 		<c:otherwise>
@@ -25,25 +25,20 @@
 					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Category Name</th>
 					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Category Description</th>
 				</tr>
-				<c:forEach items="${cList}" var="categoryObj">
+				<c:forEach items="${scList}" var="subCategoryObj">
 					<tr>
 						<!--<td>${categoryObj.categoryId}</td>-->
 						<%-- <td>${categoryObj.categoryId}</td> --%>
-						<td>${categoryObj.categoryName}</td>
-						<td>${categoryObj.categoryDesc}</td>
+						<td>${subCategoryObj.subCategoryName}</td>
+						
 						<td>
 							
-							<a href="deleteCategory?catId=${categoryObj.categoryId}"><i class="fa fa-trash" aria-hidden="true"></i></a>
+							<a href="deleteSubCategory?subCatId=${subCategoryObj.subCategoryId}"><i class="fa fa-trash" aria-hidden="true"></i></a>
 						</td>
 						<td>
-							<a href="updateCategory?catId=${categoryObj.categoryId}"><i class="fa fa-edit" aria-hidden="true"></i></a>
+							<a href="updateSubCategory?subCatId=${subCategoryObj.subCategoryId}"><i class="fa fa-edit" aria-hidden="true"></i></a>
 						</td>
-						<!--  <td>
-							<a href="addSubCategory?catId=${categoryObj.categoryId}">Add Sub Category</a>
-						</td>
-						<td>
-							<a href="#?catId=${categoryObj.categoryId}">View Sub Category</a>
-						</td>-->
+						
 					</tr>
 				</c:forEach>
 			</table>

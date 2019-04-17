@@ -23,6 +23,7 @@
     <input type="text" class="form-control" id="desc" name="desc">
     </div>
   </div>
+  
     <button type="submit" class="btn btn-default" style=" margin-left:30%;">Add Category</button>
 </form>
 <img src="images/separator.png" alt="Main_Image" style="width:100%">
