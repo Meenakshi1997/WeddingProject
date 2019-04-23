@@ -1,3 +1,4 @@
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,13 +16,26 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#" style="font-family:Monotype Corsiva; color:brown; font-size:40px; font-weight:bold">Wedding Planner</a>
     </div>
+    
     <ul class="nav navbar-nav" style="margin-left:25%">
+    
+    	
       <li class="active"><a href="HomePage.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px; " >Home</a></li>
+      
+      <c:forEach items="${categories}" var="category">
+    	<li><a href="fetchSubCategories?category=${category.categoryId}" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">${category.categoryName}</a></li>
+	  </c:forEach>
       <li><a href="Login.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">Admin</a></li>
-      <li><a href="Login.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">Planner</a></li>
       <li><a href="UserLogin.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">User</a></li>
       <li><a href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">Contact Us</a></li>
       <li><a href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">About Us</a></li>
+    
+    
+    	
+    
     </ul>
+    
+    
+    
   </div>
 </nav>

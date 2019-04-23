@@ -42,7 +42,7 @@
   </div>
   
 
-    <button type="submit" class="btn btn-default" style=" margin-left:30%;">Add Sub Category</button>
+    <button type="submit" class="btn btn-default" style=" margin-left:30%;">Add Venues</button>
 </form>
 <img src="images/separator.png" alt="Main_Image" style="width:100%">
  </div>

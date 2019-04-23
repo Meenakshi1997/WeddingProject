@@ -57,12 +57,13 @@ public class UserDaoImpl implements UserDao {
 			ps.setString(1,email);
 			ResultSet rs=ps.executeQuery();
 			if(rs.next());
-				String fname=rs.getString(1);
-				String lname=rs.getString(2);
-				String em=rs.getString(3);
-				Date dob=rs.getDate(4);
-				String address=rs.getString(5);
-				String mob=rs.getString(6);
+				String fname=rs.getString(3);
+				String lname=rs.getString(4);
+				String em=rs.getString(1);
+				Date dob=rs.getDate(6);
+				String address=rs.getString(7);
+				String mob=rs.getString(8);
+				String gender=rs.getString(5);
 				
 				User user=new User();
 				user.setFirstName(fname);
@@ -71,6 +72,7 @@ public class UserDaoImpl implements UserDao {
 				user.setDateOfBirth(dob);
 				user.setAddress(address);
 				user.setMobileNo(mob);
+				user.setGender(gender);
 
 				return user;
 			

@@ -12,7 +12,16 @@ public class User {
 	private Date dateOfBirth;
 	private String address;
 	private String mobileNo;
+	private String role;
 	
+	
+	
+	public String getRole() {
+		return role;
+	}
+	public void setRole(String role) {
+		this.role = role;
+	}
 	public String getEmail() {
 		return email;
 	}

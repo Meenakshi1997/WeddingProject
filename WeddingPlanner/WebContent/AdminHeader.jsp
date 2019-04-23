@@ -15,14 +15,19 @@
     <div class="navbar-header">
       <a class="navbar-brand" href="#" style="font-family:Monotype Corsiva; color:brown; font-size:40px; font-weight:bold">Wedding Planner</a>
     </div>
-    <ul class="nav navbar-nav" style="margin-left:25%">
+    <ul class="nav navbar-nav" style="margin-left:15%">
       <li class="active"><a href="HomePage.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px;">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px;" >Category<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="AddCategory.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Add Category</a></li>
-          <li><a href="viewAllCategory" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">View All Categories</a></li>
-		<li><a href="VenueForm.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Add Venue</a></li>
-		<li><a href="viewAllVenues" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">View All Venues</a></li>
+          	<li><a href="AddCategory.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">Add Category</a></li>
+          	<li><a href="viewAllCategory" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">View All Categories</a></li>
+			<li><a href="VenueForm.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">Add Venue</a></li>
+			<li><a href="viewAllVenues" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">View All Venues</a></li>
+			<li><a href="CateringForm.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">Add Catering</a></li>
+			<li><a href="viewAllCaterings" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">View All Caterings</a></li>
+			<li><a href="VendorForm.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">Add Vendors</a></li>
+			<li><a href="viewAllVendors" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">View All Vendors</a></li>
+			
 		</ul>
       </li>
       <li><a href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">Contact Us</a></li>
@@ -33,16 +38,16 @@
   </div>
 
  <ul class="nav navbar-nav navbar-right" style="margin-right:80px; margin-top:-4%">
-    <li class="dropdown" ><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px;">Welcome : <span class="caret"></span></a>
+    <li class="dropdown" ><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px;">Welcome : ${sessionScope.user.firstName} ${sessionScope.user.lastName}<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="ViewProfile.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">View Profile</a></li>
-          <li><a href="UpdateProfile.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Update Profile</a></li>
-          <li><a href="ChangePassword.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Change Password</a></li>
+          <li><a href="ViewAdminProfile.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">View Profile</a></li>
+          <li><a href="UpdateAdminProfile.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Update Profile</a></li>
+          <li><a href="ChangeAdminPassword.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Change Password</a></li>
           <li><a href="#" style="font-family:Monotype Corsiva; color:brown; font-size:15px;"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
         </ul>
       </li>
 
     </ul>
-    </nav>
+     </nav>
 </body>
 </html>

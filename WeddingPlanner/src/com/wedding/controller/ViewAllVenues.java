@@ -11,12 +11,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.wedding.daos.CategoryDao;
 import com.wedding.daos.VenueDao;
-import com.wedding.daosimpl.CategoryDaoImpl;
 import com.wedding.daosimpl.VenueDaoImpl;
-import com.wedding.models.Category;
-import com.wedding.models.Venue;
 
 
 @WebServlet("/viewAllVenues")

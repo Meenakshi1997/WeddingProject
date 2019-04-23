@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.wedding.daos.VenueDao;
-import com.wedding.models.Category;
 import com.wedding.models.Venue;
 import com.wedding.utility.ConnectionProvider;
 
@@ -96,7 +95,8 @@ public class VenueDaoImpl implements VenueDao {
 			ps.setString(1,venueObj.getVenueName());
 			ps.setInt(2, venueObj.getPrice());
 			ps.setString(3, venueObj.getLocation());
-			ps.setInt(4,venueObj.getVenueId());
+			ps.setString(4, venueObj.getImage());
+			ps.setInt(5,venueObj.getVenueId());
 			int i=ps.executeUpdate();
 			if(i!=0)return true;
 			}

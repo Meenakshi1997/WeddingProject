@@ -53,7 +53,7 @@ public class AddVenueController extends HttpServlet {
 		String serverLocation=session.getServletContext().getRealPath("/");
 		System.out.println(serverLocation);
 
-		String filePath=serverLocation+"images";
+		String filePath=serverLocation+"\\images";
 		System.out.println("filePath : "+filePath);
 
 		File fileObj=new File(filePath);
@@ -82,7 +82,7 @@ public class AddVenueController extends HttpServlet {
 
 			for(Venue v1:venuesList){
 				System.out.println(v1);
-			}
+			}                                           
 			
 			request.setAttribute("vList",venuesList);
 			

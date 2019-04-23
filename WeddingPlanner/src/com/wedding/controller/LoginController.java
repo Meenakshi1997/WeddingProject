@@ -40,10 +40,22 @@ public class LoginController extends HttpServlet {
 		}
 		else {
 			String role=obj.getRole();
+			
+			
 			if(role.equals("Admin")) {
 				
-				//HttpSession session=request.getSession();
-			//	session.setAttribute("admin",userObj);
+				
+				 System.out.println( " Role  i s  Admin");
+				
+				UserDao ud=new UserDaoImpl();
+				User userObj=ud.getUser(s1);
+				userObj.setRole("Admin");
+				
+				System.out.println(userObj);
+				
+				HttpSession session=request.getSession();
+				session.setAttribute("user",userObj);
+				
 				
 				RequestDispatcher rd=request.getRequestDispatcher("Admin.jsp");
 				rd.forward(request, response);
@@ -51,6 +63,7 @@ public class LoginController extends HttpServlet {
 			else if(role.equals("user")){
 				UserDao ud=new UserDaoImpl();
 				User userObj=ud.getUser(s1);
+				userObj.setRole("user");
 				
 				HttpSession session=request.getSession();
 				session.setAttribute("user",userObj);

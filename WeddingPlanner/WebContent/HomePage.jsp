@@ -1,5 +1,8 @@
 <div style="background-image:url(images\\bg-body.jpg); height:150%; width:100%"></div>
+
 <jsp:include page="Navbar.jsp"/>
+
+
 <!-- Content -->
 <div class="container" style="margin-top:-850px">
 	<img src="images/m10.jpg" class="img-rounded" alt="Main_Image" style="width:100%">

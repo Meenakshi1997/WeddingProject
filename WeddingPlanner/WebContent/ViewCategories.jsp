@@ -1,10 +1,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div style="background-image:url(images\\bg-body.jpg); height:100%; width:100%"></div>
+<div style="background-image:url(images\\bg-body.jpg); height:150%; width:100%"></div>
 <jsp:include page="AdminHeader.jsp"/>
-	<br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/>
 <!-- Content -->
-<div class="container" style="margin-top:-600px">
+<div class="container" style="margin-top:-900px">
 	<c:if test="${not empty msg}">
 		<div class="alert alert-success">
 			${msg}
@@ -24,6 +24,9 @@
 		<!-- 			<th>Category Id</th> -->
 					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Category Name</th>
 					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Category Description</th>
+					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Delete</th>
+					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Update</th>
+			
 				</tr>
 				<c:forEach items="${cList}" var="categoryObj">
 					<tr>

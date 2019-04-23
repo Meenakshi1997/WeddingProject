@@ -11,11 +11,11 @@
 	
 	<div align="center"><h2 style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Update Venue Form</h2></div>
 
-<form class="form-horizontal" action="addVenue" method="get" enctype="multipart/form-data" style="margin-left:25%">
+<form class="form-horizontal" action="updateVenueProcess" method="post" enctype="multipart/form-data" style="margin-left:25%">
 
 <div class="form-group">
     <label class="control-label col-sm-2" for="venueId">Venue Id :</label>
-    <div class="col-sm-10">
+    <div class="col-sm-5">
     <input type="text" class="form-control" id="venueId" name="venueId" value="${requestScope.venueObj.venueId}" readonly="readonly">
     </div>
 </div>

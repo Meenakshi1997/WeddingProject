@@ -1,10 +1,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<div style="background-image:url(images\\bg-body.jpg); height:100%; width:100%"></div>
-<jsp:include page="AdminHeader.jsp"/>
-	<br/><br/><br/><br/>
+<div style="background-image:url(images\\bg-body.jpg); height:150%; width:100%"></div>
+
+
+<%-- <jsp:include page="AdminHeader.jsp"/> --%>
+
+<jsp:include page="Navbar.jsp"/>
+
+	<br/><br/><br/><br/><br/><br/>
 <!-- Content -->
-<div class="container" style="margin-top:-600px">
+
+<div class="container" style="margin-top:-900px">
 	<c:if test="${not empty msg}">
 		<div class="alert alert-success">
 			${msg}
@@ -20,33 +26,59 @@
 			
 		</c:when>
 		<c:otherwise>
-			<table class="table table-hover">
-				<tr>
-					<!--<th>Category Id</th>-->
-		<!-- 			<th>Category Id</th> -->
-					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Venue Name</th>
-					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Price</th>
-					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Location</th>
-					<th style="font-family:Monotype Corsiva; color:brown; font-size:30px; font-weight:bold">Image</th>
-				</tr>
 				<c:forEach items="${vList}" var="venueObj">
-					<tr>
-						<td>${venueObj.venueName}</td>
-						<td>${venueObj.price}</td>
-						<td>${venueObj.location}</td>
-						<td>
-						
-						<img src="${pageContext.request.contextPath}/images/venue.jpg" style="height:100px;width:100px"/></td>
-						<td>
-							
-							<a href="deleteVenue?venId=${venuesObj.venueId}"><i class="fa fa-trash" aria-hidden="true"></i></a>
-						</td>
-						<td>
-							<a href="updateVenue?venId=${venuesObj.venueId}"><i class="fa fa-edit" aria-hidden="true"></i></a>
-						</td>
-					</tr>
+	
+	<div class="col-md-4 column productbox">
+        <img src="images/${venueObj.image}.jpg" style="height:100px;width:100px" class="img-responsive">
+        <div class="venueName">${venueObj.venueName}</div>
+        <div class="venueLocation">${venueObj.location}</div>
+        <div class="venueprice">
+        
+        
+        <c:if test="${sessionScope.user.role ne 'Admin'}">
+        <div class="pull-right">
+        <a href="#" class="btn btn-danger btn-sm" role="button">BUY</a>
+        </div>
+        </c:if>
+        
+        
+        <div class="pricetext">${venueObj.price}</div></div>
+        
+        
+       	<c:if test="${sessionScope.user.role eq 'Admin'}">
+        <a href="deleteVenue?venId=${venuesObj.venueId}" class="btn btn-primary"><i class="fa fa-trash " aria-hidden="true"></i>Delete</a>
+		<a href="updateVenue?venId=${venuesObj.venueId}" class="btn btn-primary"><i class="fa fa-edit"  aria-hidden="true"></i>Update</a>
+		</c:if>
+		
+    </div>
+									
 				</c:forEach>
-			</table>
+			
 		</c:otherwise>
 	</c:choose>
  </div>
+ <style>
+ 	.productbox {
+    background-color:#ffffff;
+	padding:10px;
+	margin-bottom:10px;
+	-webkit-box-shadow: 0 8px 6px -6px  #999;
+	   -moz-box-shadow: 0 8px 6px -6px  #999;
+	        box-shadow: 0 8px 6px -6px #999;
+}
+
+.venueName {
+    font-weight:bold;
+	padding:5px 0 5px 0;
+}
+
+.venueLocation {
+	border-top:1px solid #dadada;
+	padding-top:5px;
+}
+
+.venuePrice {
+	font-weight:bold;
+	font-size:1.4em;
+}
+ </style>
