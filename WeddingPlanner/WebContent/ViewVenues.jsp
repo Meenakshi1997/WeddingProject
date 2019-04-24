@@ -1,11 +1,20 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                                   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div style="background-image:url(images\\bg-body.jpg); height:150%; width:100%"></div>
 
 
 <%-- <jsp:include page="AdminHeader.jsp"/> --%>
 
+<c:if test="${sessionScope.user.role eq 'Admin'}">
+<jsp:include page="AdminHeader.jsp"/>
+</c:if>
+<c:if test="${sessionScope.user.role eq 'user'}">
+<jsp:include page="UserHeader.jsp"/>
+</c:if>
+
+<c:if test="${empty sessionScope.user.role}">
 <jsp:include page="Navbar.jsp"/>
+</c:if>
 
 	<br/><br/><br/><br/><br/><br/>
 <!-- Content -->
@@ -22,14 +31,14 @@
 	<c:choose>
 		<c:when test="${vList.size() eq 0}">
 		
-			No Categories Found...
+			No Venues Found...
 			
 		</c:when>
 		<c:otherwise>
 				<c:forEach items="${vList}" var="venueObj">
 	
 	<div class="col-md-4 column productbox">
-        <img src="images/${venueObj.image}.jpg" style="height:100px;width:100px" class="img-responsive">
+        <img src="images/${venueObj.image}.jpg" style="height:250px;width:300px" class="img-responsive">
         <div class="venueName">${venueObj.venueName}</div>
         <div class="venueLocation">${venueObj.location}</div>
         <div class="venueprice">
@@ -46,8 +55,8 @@
         
         
        	<c:if test="${sessionScope.user.role eq 'Admin'}">
-        <a href="deleteVenue?venId=${venuesObj.venueId}" class="btn btn-primary"><i class="fa fa-trash " aria-hidden="true"></i>Delete</a>
-		<a href="updateVenue?venId=${venuesObj.venueId}" class="btn btn-primary"><i class="fa fa-edit"  aria-hidden="true"></i>Update</a>
+        <a href="deleteVenue?VenueId=${venueObj.venueId}" class="btn btn-primary"><i class="fa fa-trash " aria-hidden="true"></i>Delete</a>
+		<a href="updateVenue?VenueId=${venueObj.venueId}" class="btn btn-primary"><i class="fa fa-edit"  aria-hidden="true"></i>Update</a>
 		</c:if>
 		
     </div>

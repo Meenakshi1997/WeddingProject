@@ -4,7 +4,7 @@
 
 
 <!-- Content -->
-<div class="container" style="margin-top:-850px">
+<div class="container" style="margin-top:-800px">
 	<img src="images/m10.jpg" class="img-rounded" alt="Main_Image" style="width:100%">
 <br/><br/>
 	<div class="jumbotron" style="height:10%">

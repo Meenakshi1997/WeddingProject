@@ -8,7 +8,7 @@
 		<br/><br/><br/>
 		<img src="images/separator.png" class="img-rounded" alt="Main_Image" style="width:100%">
 		<br/><br/>
-	<h1 style="font-family:Monotype Corsiva; text-align:center; color:brown; font-size:30px; font-weight:bold">User Update Profile</h1>     
+	<h1 style="font-family:Monotype Corsiva; text-align:center; color:brown; font-size:30px; font-weight:bold">Update Profile</h1>     
   	<br/>
 <form class="form-horizontal" action="updateUser" method="post" style="margin-left:25%">
   <div class="form-group">

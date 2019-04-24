@@ -3,7 +3,7 @@
 <jsp:include page="Navbar.jsp"/>
 
 <br/><br/><br/>
-<div class="container" style="margin-top:-700px">
+<div class="container" style="margin-top:-650px">
 <%--
  <%
 	Object msg=request.getAttribute("errorMsg");

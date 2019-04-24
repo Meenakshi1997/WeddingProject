@@ -22,7 +22,7 @@ public class DeleteVenueController extends HttpServlet {
 	response.setContentType("text/html");
 	PrintWriter out=response.getWriter();
 
-	int id=Integer.parseInt(request.getParameter("venueId"));
+	int id=Integer.parseInt(request.getParameter("VenueId"));
 
 	VenueDao venDao=new VenueDaoImpl();
 	boolean r=venDao.deleteVenue(id);

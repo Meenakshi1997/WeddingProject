@@ -2,6 +2,17 @@
 <jsp:include page="AdminHeader.jsp"/>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<c:if test="${sessionScope.user.role eq 'Admin'}">
+<jsp:include page="AdminHeader.jsp"/>
+</c:if>
+<c:if test="${sessionScope.user.role eq 'user'}">
+<jsp:include page="UserHeader.jsp"/>
+</c:if>
+
+<c:if test="${empty sessionScope.user.role}">
+<jsp:include page="Navbar.jsp"/>
+</c:if>
+
 	<br/>
 <!-- Content -->
 <div class="container" style="margin-top:-870px">
@@ -16,7 +27,7 @@
 <div class="form-group">
     <label class="control-label col-sm-2" for="venueId">Venue Id :</label>
     <div class="col-sm-5">
-    <input type="text" class="form-control" id="venueId" name="venueId" value="${requestScope.venueObj.venueId}" readonly="readonly">
+    <input type="text" class="form-control" id="venueId" name="venueId" value="${requestScope.venueObj.venueId}">
     </div>
 </div>
   <div class="form-group">

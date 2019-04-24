@@ -40,9 +40,9 @@
  <ul class="nav navbar-nav navbar-right" style="margin-right:80px; margin-top:-4%">
     <li class="dropdown" ><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px;">Welcome : ${sessionScope.user.firstName} ${sessionScope.user.lastName}<span class="caret"></span></a>
         <ul class="dropdown-menu">
-          <li><a href="ViewAdminProfile.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">View Profile</a></li>
-          <li><a href="UpdateAdminProfile.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Update Profile</a></li>
-          <li><a href="ChangeAdminPassword.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Change Password</a></li>
+          <li><a href="ViewProfile.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">View Profile</a></li>
+          <li><a href="UpdateProfile.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Update Profile</a></li>
+          <li><a href="ChangePassword.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:15px;">Change Password</a></li>
           <li><a href="#" style="font-family:Monotype Corsiva; color:brown; font-size:15px;"><span class="glyphicon glyphicon-log-out"></span>Logout</a></li>
         </ul>
       </li>

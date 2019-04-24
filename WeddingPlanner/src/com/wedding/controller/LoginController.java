@@ -45,7 +45,7 @@ public class LoginController extends HttpServlet {
 			if(role.equals("Admin")) {
 				
 				
-				 System.out.println( " Role  i s  Admin");
+				 System.out.println( " Role  is  Admin");
 				
 				UserDao ud=new UserDaoImpl();
 				User userObj=ud.getUser(s1);

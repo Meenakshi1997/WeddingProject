@@ -17,7 +17,7 @@
       <a class="navbar-brand" href="#" style="font-family:Monotype Corsiva; color:brown; font-size:40px; font-weight:bold">Wedding Planner</a>
     </div>
     
-    <ul class="nav navbar-nav" style="margin-left:25%">
+    <ul class="nav navbar-nav" style="margin-left:30%">
     
     	
       <li class="active"><a href="HomePage.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px; " >Home</a></li>
@@ -27,8 +27,8 @@
 	  </c:forEach>
       <li><a href="Login.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">Admin</a></li>
       <li><a href="UserLogin.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">User</a></li>
-      <li><a href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">Contact Us</a></li>
-      <li><a href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">About Us</a></li>
+      <li><a href="ContactUs.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">Contact Us</a></li>
+      <li><a href="AboutUs.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px; ">About Us</a></li>
     
     
     	
