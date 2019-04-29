@@ -17,6 +17,14 @@
     </div>
     <ul class="nav navbar-nav" style="margin-left:25%">
       <li class="active"><a href="HomePage.jsp" style="font-family:Monotype Corsiva; color:brown; font-size:25px;">Home</a></li>
+      <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px;" >Category<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+        	<li><a href="viewAllVenues" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">View All Venues</a></li>
+			<li><a href="viewAllCaterings" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">View All Caterings</a></li>
+			<li><a href="viewAllVendors" style="font-family:Monotype Corsiva; color:brown; font-size:20px;">View All Vendors</a></li>
+	
+        </ul>
+     </li>
       <li><a href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px;">Add Event</a></li>
       <li><a href="#" style="font-family:Monotype Corsiva; color:brown; font-size:25px;">Payment</a></li>
 

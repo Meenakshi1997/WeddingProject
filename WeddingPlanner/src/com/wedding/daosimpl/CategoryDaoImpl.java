@@ -57,7 +57,7 @@ public class CategoryDaoImpl implements CategoryDao {
 			PreparedStatement ps=conn.prepareStatement("update categorytab set catname=? , catdesc=? where catId=?");
 			ps.setString(1,categoryObj.getCategoryName());
 			ps.setString(2,categoryObj.getCategoryDesc());
-			ps.setInt(4,categoryObj.getCategoryId());
+			ps.setInt(3,categoryObj.getCategoryId());
 			int i=ps.executeUpdate();
 			if(i!=0)return true;
 			}

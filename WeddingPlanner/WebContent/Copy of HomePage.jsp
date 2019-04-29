@@ -1,4 +1,4 @@
-
+<div style="background-image:url(images\\bg-body.jpg); height:150%; width:100%">
 <jsp:include page="Navbar.jsp"/>
 <br/><br/><br/>
 <!-- Content -->
@@ -81,6 +81,7 @@
 
 
 
-</div>
+
 <br/>
-<jsp:include page="Footer.jsp"/>            
+<jsp:include page="Footer.jsp"/> 
+</div>           

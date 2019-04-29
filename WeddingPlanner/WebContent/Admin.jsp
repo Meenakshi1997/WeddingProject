@@ -1,4 +1,4 @@
-<div style="background-image:url(images\\bg-body.jpg); height:100%; width:100%"></div>
+<div style="background-image:url(images\\bg-body.jpg); height:100%; width:100%"></div> 
 <jsp:include page="AdminHeader.jsp"/>
 
 <br/><br/><br/>
@@ -11,4 +11,4 @@
  </div>
 
 <p/>
-                  
+                 
